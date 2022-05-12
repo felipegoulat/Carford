@@ -16,7 +16,7 @@ def token_user(user):
 @pytest.fixture
 def data_response_not_credential():
     return {
-        'detail': 'Authentication credentials were not provided!'
+        'detail': 'As credenciais de autenticação não foram fornecidas.'
     }
 
 
@@ -46,4 +46,11 @@ def data_create_owner():
     }
 
 
-
+@pytest.fixture
+def data_response_create_owner():
+    return {
+        'id': 4,
+        'sales_opportunity': False,
+        'name': 'TESTE',
+        'doc_number': '00000000000'
+    }

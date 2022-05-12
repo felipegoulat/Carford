@@ -42,7 +42,7 @@ def test_token_user_without_body(
     response = client.post('/api/token/', **headers)
 
     assert response.status_code == 400
-    assert response.json() == {'message': 'Bad request'}
+    assert response.json() == {'message': 'Bad Request'}
 
 
 @pytest.mark.django_db
@@ -56,4 +56,4 @@ def test_token_not_found_user(
     response = client.post('/api/token/', data=data, **headers)
 
     assert response.status_code == 400
-    assert response.json() == {"message":"User not Found"}
+    assert response.json() == {"message":"User not found"}
